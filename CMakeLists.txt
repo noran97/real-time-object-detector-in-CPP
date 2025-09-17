@@ -38,7 +38,10 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 include_directories(${ONNXRUNTIME_INCLUDE_DIRS})
 
 # Create executable
-add_executable(yolo_inference main.cpp)
+add_executable(yolo_inference
+ main.cpp
+ Detector.cpp
+)
 
 # Link libraries
 target_link_libraries(yolo_inference 
